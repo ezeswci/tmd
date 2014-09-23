@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mi Presion Arterial</title>
+
+
+<link href="css/estilos.css" rel="stylesheet" type="text/css" />
+    
+</head>
+
+<script language="javascript">
+	function abrirVentana(ventana)
+	{
+		if (ventana=="1")
+		{
+			document.getElementById("cartel").style.visibility="visible";
+			document.getElementById("fondo_negro").style.visibility="visible";
+		}
+
+		else
+		{
+			document.getElementById("cartel").style.visibility="hidden";;
+			document.getElementById("fondo_negro").style.visibility="hidden";
+		}
+
+	}
+
+	function cerrarVentana()
+	{
+		document.getElementById("cartel").style.visibility="hidden";
+		document.getElementById("fondo_negro").style.visibility="hidden";
+
+	}
+</script>
+
+<body>
+<div class="header">
+  <div class="triangulo_inf"></div> 
+<div class="titulo">M&Aacute;S</div> </div>
+
+<div id="cartel">
+<div id="x" onclick="cerrarVentana()"><img src="img/x.jpg" width="35" height="35" /></div>
+ “Mi Presi&oacute;n” desea acceder a tu calendario.
+  <div class="botones">
+    <div class="boton">NO PERMITIR</div>
+    <div class="boton">OK</div>
+  </div>
+</div>
+<div id="fondo_negro"></div>
+<p>&nbsp;</p>
+<div class="cuerpo_mas">
+  <a href="controlar_presion.html"><div class="item">Controlar mi presi&oacute;n<img src="img/flecha.jpg" width="23" height="38" /></div></a>
+  <a href="javascript:abrirVentana('1');"><div class="item">Recordatorio  <img src="img/flecha.jpg" width="23" height="38" /></div></a>
+  <div class="item">Recomendar a un amigo<img src="img/flecha.jpg" width="23" height="38" /></div>
+</div>
+<div class="footer"><a href="datos.html"><img src="img/datos.jpg" width="135" height="135" /></a><a href="estadisticas.html"><img src="img/estadisticas.jpg" width="135" height="135" /></a><a href="historial.html"><img src="img/historial.jpg" width="135" height="135" /></a><a href="mas.html"><img src="img/mas_hover.jpg" width="135" height="135" /></a></div>
+</body>
+</html>

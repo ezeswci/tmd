@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mi Presion Arterial</title>
+    <script src="js/lib/phonegap-1.1.0.js" type="text/javascript"></script>
+    <script src="js/lib/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="js/lib/d3.js" type="text/javascript"></script>
+
+    <script src="js/estadisticas.js" type="application/javascript"></script>
+    
+    <link href="css/estilos.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div class="header blanco">
+        <div class="titulo">
+            <a href="index.html">
+                <img class="boton_volver" src="img/boton_volver.jpg" width="105" height="59" />
+            </a>SELECCIONAR
+            <a href="estadisticas_info.html">
+                <img class="i" src="img/I-b.jpg" width="40" height="40" />
+            </a>
+        </div>
+    </div>
+    <div class="estadisticas-menu">
+        <div class="item">Hoy</div>
+        <div class="item actual">1 sem</div>
+        <div class="item">3 sem</div>
+        <div class="item">1 mes</div>
+        <div class="item">3 mes</div>
+    </div>
+
+    <div class="cuerpo">
+        <div class="mediciones">N mediciones total</div>
+        <div class="mediciones">N mediciones MAX mayor de 140 mmHg</div>
+        <div class="mediciones">N mediciones MIN mayor de 90 mmHg</div>
+        <div class="grafico">
+            <svg id="visualisation" width="200" height="200"></svg>
+        </div>
+    </div>
+</body>
+
+</html>
