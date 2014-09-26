@@ -1,5 +1,27 @@
+var maxDataOriginal = [];
+var minDataOriginal = [];
 var maxData = [];
 var minData = [];
+
+function cleanHist(newDate) {
+    maxData = [];
+    minData = [];
+    alert(JSON.stringify(maxDataOriginal));
+    alert(JSON.stringify(maxDataOriginal[3].date.toLocaleString()));
+    alert(JSON.stringify(maxData));
+    
+    for (index = 0; index < maxDataOriginal.length; index++) {
+        if (maxDataOriginal[index].date > newDate) {
+            maxData.push(maxDataOriginal[index]);
+        }
+    }
+    for (index = 0; index < minDataOriginal.length; index++) {
+        if (minDataOriginal[index].date > newDate) {
+            minData.push(minDataOriginal[index]);
+        }
+    }
+    alert(JSON.stringify(maxData));
+}
 
 $(document).ready(onDeviceReady);
 
@@ -10,6 +32,71 @@ var db;
 // PhoneGap is ready
 //
 function onDeviceReady() {
+    //Actual date
+    //
+    var d = new Date();
+    var dd = d.getDay();
+    var mm = d.getMonth();
+    var yy = d.getFullYear();
+
+    //Onclick CB
+    //
+
+    $("#actual1").click(function () {
+
+        $(".item").removeClass("actual");
+        $("#actual1").addClass("actual");
+        $('#visualisation').empty();
+        //Substract 1 day
+        var newDate = new Date(new Date().setDate(new Date().getDate() - 1));
+        //        alert(d);
+        //        alert(newDate);
+        cleanHist(newDate);
+        drawGraph();
+    });
+    $("#actual2").click(function () {
+        $(".item").removeClass("actual");
+        $("#actual2").addClass("actual");
+        $('#visualisation').empty();
+        //Substract 1 week
+        var newDate = new Date(new Date().setDate(new Date().getDate() - 7));
+        //        alert(d);
+        //        alert(newDate);
+        cleanHist(newDate);
+        drawGraph();
+    });
+    $("#actual3").click(function () {
+        $(".item").removeClass("actual");
+        $("#actual3").addClass("actual");
+        $('#visualisation').empty();
+
+        //Substract 3 weeks
+        var newDate = new Date(new Date().setDate(new Date().getDate() - 21));
+        cleanHist(newDate);
+        drawGraph();
+    });
+    $("#actual4").click(
+        function () {
+            $(".item").removeClass("actual");
+            $("#actual4").addClass("actual");
+            $('#visualisation').empty();
+
+            //Substract 1 month
+            var newDate = new Date(new Date().setDate(new Date().getDate() - 30));
+            cleanHist(newDate);
+            drawGraph();
+        });
+
+    $("#actual5").click(
+        function () {
+            $(".item").removeClass("actual");
+            $("#actual5").addClass("actual");
+            $('#visualisation').empty();
+            //Substract 1 month
+            var newDate = new Date(new Date().setDate(new Date().getDate() - 90));
+            cleanHist(newDate);
+            drawGraph();
+        });
 
     var dbSize = 200000;
     var dbName = "TMD";
@@ -32,13 +119,13 @@ function initDB(tx) {
 // Transaction error callback
 //
 function errorCB(tx, err) {
-    alert("Error processing SQL: " + err);
+    //alert("Error processing SQL: " + err);
 }
 
 // Transaction success callback
 //
 function successCB() {
-    alert("Success!");
+    //alert("Success!");
     //Select query
     //
     db.transaction(selectHist, errorCB);
@@ -49,7 +136,7 @@ function selectHist(tx) {
 }
 
 function querySuccess(tx, rs) {
-    alert("query succces");
+    //alert("query succces");
     // this will be empty since no rows were inserted.
     buildGraphHist(rs);
     drawGraph();
@@ -64,13 +151,17 @@ function buildGraphHist(rs) {
 
         maxTemp.y = p.max;
         maxTemp.x = i;
+        maxTemp.date = new Date(p.yy, p.mm, p.dd, p.hs, p.minut, 0, 0);
 
         minTemp.y = p.min;
         minTemp.x = i;
+        minTemp.date = new Date(p.yy, p.mm, p.dd, p.hs, p.minut, 0, 0);
 
         maxData.push(maxTemp);
         minData.push(minTemp);
     }
+    maxDataOriginal = maxData;
+    minDataOriginal = minData;
 }
 
 function drawGraph() {
@@ -129,7 +220,7 @@ function drawGraph() {
         .attr('stroke', 'blue')
         .attr('stroke-width', 2)
         .attr('fill', 'none');
-    
+
     vis.append('svg:path')
         .attr('d', lineFunc(minData))
         .attr('stroke', 'red')

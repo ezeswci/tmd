@@ -28,7 +28,7 @@ function onDeviceReady() {
 
     $("#borrarButton").click(
         function () {
-            alert("Borrar");
+           // alert("Borrar");
         });
 }
 
@@ -48,8 +48,8 @@ function insertHist(tx) {
     var max = $("#max").val();
     var min = $("#min").val();
     var note = $("#note").val();
-    var dd = 1;
-    var mm = 2;
+    var dd = 2;
+    var mm = 8-1;
     var yy = 2014;
     var hs = 17;
     var minut = 45;
@@ -66,13 +66,13 @@ function selectHist(tx) {
 // Transaction error callback
 //
 function errorCB(tx, err) {
-    alert("Error processing SQL: " + err);
+    //alert("Error processing SQL: " + err);
 }
 
 // Transaction success callback
 //
 function successCB() {
-    alert("Success!");
+    //alert("Success!");
 }
 
 // Alerts CB

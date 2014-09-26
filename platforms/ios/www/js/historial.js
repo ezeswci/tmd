@@ -28,13 +28,13 @@ function initDB(tx) {
 // Transaction error callback
 //
 function errorCB(tx, err) {
-    alert("Error processing SQL: " + err);
+    //alert("Error processing SQL: " + err);
 }
 
 // Transaction success callback
 //
 function successCB() {
-    alert("Success!");
+    //alert("Success!");
     //Select query
     //
     db.transaction(selectHist, errorCB);
