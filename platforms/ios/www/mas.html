@@ -15,25 +15,6 @@
 
 </head>
 
-<script language="javascript">
-    function abrirVentana(ventana) {
-        if (ventana == "1") {
-            document.getElementById("cartel").style.visibility = "visible";
-            document.getElementById("fondo_negro").style.visibility = "visible";
-        } else {
-            document.getElementById("cartel").style.visibility = "hidden";;
-            document.getElementById("fondo_negro").style.visibility = "hidden";
-        }
-
-    }
-
-    function cerrarVentana() {
-        document.getElementById("cartel").style.visibility = "hidden";
-        document.getElementById("fondo_negro").style.visibility = "hidden";
-
-    }
-</script>
-
 <body>
     <div class="header">
         <div class="triangulo_inf"></div>
@@ -41,13 +22,13 @@
     </div>
 
     <div id="cartel">
-        <div id="x" onclick="cerrarVentana()">
+        <div id="x">
             <img src="img/x.jpg" width="35" height="35" />
         </div>
         “Mi Presi&oacute;n” desea acceder a tu calendario.
         <div class="botones">
-            <div class="boton">NO PERMITIR</div>
-            <div class="boton">OK</div>
+            <div id="x" class="boton">NO PERMITIR</div>
+            <div id="permitir" class="boton">OK</div>
         </div>
     </div>
     <div id="fondo_negro"></div>
@@ -58,7 +39,7 @@
                 <img src="img/flecha.jpg" width="23" height="38" />
             </div>
         </a>
-        <a href="javascript:abrirVentana('1');">
+        <a>
             <div class="item" id="recordatorio">Recordatorio
                 <img src="img/flecha.jpg" width="23" height="38" />
             </div>

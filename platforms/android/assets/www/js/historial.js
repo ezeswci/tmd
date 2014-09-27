@@ -22,7 +22,7 @@ function onDeviceReady() {
 // Init the table
 //
 function initDB(tx) {
-    tx.executeSql('CREATE TABLE IF NOT EXISTS HIST (id unique, max, min, note)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS HIST (min,max,note,dd,mm,yy,hs,minut)');
 }
 
 // Transaction error callback

@@ -22,13 +22,13 @@ function onDeviceReady() {
 // Init the table
 //
 function initDB(tx) {
-    tx.executeSql('CREATE TABLE IF NOT EXISTS HIST (id unique, max, min, note)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS HIST (id unique, max, min, note, dd, mm, yy, hs, minut)');
 }
 
 // Transaction error callback
 //
 function errorCB(tx, err) {
-    //alert("Error processing SQL: " + err);
+    alert("Error processing SQL: " + err);
 }
 
 // Transaction success callback
@@ -46,15 +46,17 @@ function selectHist(tx) {
 
 function querySuccess(tx, rs) {
     // this will be empty since no rows were inserted.
+
     for (var i = 0; i < rs.rows.length; i++) {
         var p = rs.rows.item(i);
-        //alert(p.min + ' ' + p.max + ' ' + p.note);
-        var element = parseHistSelect(p.min,p.max,p.note,p.dd,p.mm,p.yy,p.hs,p.minut);
+
+        var element = parseHistSelect(p.min, p.max, p.note, p.dd, p.mm, p.yy, p.hs, p.minut);
         //alert(element);
         $(".historial").append(element);
     }
 }
 
-function parseHistSelect(min,max,note,dd,mm,yy,hs,minut){
-        return '<div class="historial_item"><div class="texto"><div class="fecha">' + dd + '-' + mm + '-' + yy + ' ' + hs + ':' + minut + '</div><strong>' + max + ' / ' + min + ' mmHg</strong> - Nota: ' + note + '</div></div>';
+function parseHistSelect(min, max, note, dd, mm, yy, hs, minut) {
+
+    return '<div class="historial_item"><div class="texto"><div class="fecha">' + dd + '-' + mm + '-' + yy + ' ' + hs + ':' + minut + '</div><strong>' + max + ' / ' + min + ' mmHg</strong> - Nota: ' + note + '</div></div>';
 }

@@ -240,11 +240,10 @@ a {
 }
 
 
-.cuerpo2 .main .item .aclaracion {
+#aclaracion_max, #aclaracion_min {
 	color: #F71628;
 	font-size: 18px;
 	height: 22px;
-	visibility: hidden;
 }
 .cuerpo2 .main.error .item input {
 	color: #F71628;

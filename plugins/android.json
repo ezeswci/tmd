@@ -15,6 +15,10 @@
                         {
                             "xml": "<feature name=\"EmailComposer\"><param name=\"android-package\" value=\"de.appplant.cordova.plugin.emailcomposer.EmailComposer\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"DatePickerPlugin\"><param name=\"android-package\" value=\"com.plugin.datepicker.DatePickerPlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -46,6 +50,9 @@
             "PACKAGE_NAME": "com.frabaglia.tmd"
         },
         "de.appplant.cordova.plugin.email-composer": {
+            "PACKAGE_NAME": "com.frabaglia.tmd"
+        },
+        "com.plugin.datepicker": {
             "PACKAGE_NAME": "com.frabaglia.tmd"
         }
     },

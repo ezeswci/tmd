@@ -43,6 +43,8 @@
 		CAA464A0043E4604825DEF6F /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4B7905AB5446698A594B9A /* EventKitUI.framework */; };
 		25F54D43F52C4780A2D4581E /* APPEmailComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = A473CD2A830946BB9CE5F2EE /* APPEmailComposer.m */; };
 		29169BC6315A451E8054A7AE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8912C7AA007A4A2F999D2CC2 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		2AD191E3FB004851ADCFF2D4 /* DatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 089FDC761DB74B22AFEA9535 /* DatePicker.m */; };
+		DD937F479BB14C90A55C81D5 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1C32431CD4B41748B9D9705 /* DatePicker.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,9 @@
 		A473CD2A830946BB9CE5F2EE /* APPEmailComposer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "APPEmailComposer.m"; path = "de.appplant.cordova.plugin.email-composer/APPEmailComposer.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		E56943D472F04A1CA5CC2F55 /* APPEmailComposer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "APPEmailComposer.h"; path = "de.appplant.cordova.plugin.email-composer/APPEmailComposer.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		8912C7AA007A4A2F999D2CC2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "MessageUI.framework"; path = "System/Library/Frameworks/MessageUI.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		089FDC761DB74B22AFEA9535 /* DatePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "DatePicker.m"; path = "com.plugin.datepicker/DatePicker.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		76596B13BA624A7FB86D4C45 /* DatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DatePicker.h"; path = "com.plugin.datepicker/DatePicker.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		C1C32431CD4B41748B9D9705 /* DatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "DatePicker.xib"; path = "DatePicker.xib"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +215,7 @@
 				308D052D1370CCF300D202BF /* icons */,
 				308D05311370CCF300D202BF /* splash */,
 				8D1107310486CEB800E47090 /* TMD-Info.plist */,
+				C1C32431CD4B41748B9D9705 /* DatePicker.xib */,
 			);
 			name = Resources;
 			path = "TMD/Resources";
@@ -244,6 +250,8 @@
 				4CF798821B11436AA3526324 /* Calendar.h */,
 				A473CD2A830946BB9CE5F2EE /* APPEmailComposer.m */,
 				E56943D472F04A1CA5CC2F55 /* APPEmailComposer.h */,
+				089FDC761DB74B22AFEA9535 /* DatePicker.m */,
+				76596B13BA624A7FB86D4C45 /* DatePicker.h */,
 			);
 			name = Plugins;
 			path = "TMD/Plugins";
@@ -407,6 +415,7 @@
 				7E7966E11810823500FA85AD /* icon-50@2x.png in Resources */,
 				7E7966E51810823500FA85AD /* icon-76@2x.png in Resources */,
 				30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */,
+				DD937F479BB14C90A55C81D5 /* DatePicker.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +449,7 @@
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				F4CF7B32ACB24EDFB3D5685F /* Calendar.m in Sources */,
 				25F54D43F52C4780A2D4581E /* APPEmailComposer.m in Sources */,
+				2AD191E3FB004851ADCFF2D4 /* DatePicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

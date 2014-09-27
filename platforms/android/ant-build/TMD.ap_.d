@@ -75,9 +75,12 @@
 /Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/assets/www/js/mas.js \
 /Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/assets/www/js/lib/d3.js \
 /Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/assets/www/js/lib/jquery-1.11.1.min.js \
-/Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/assets/www/js/lib/phonegap-1.1.0.js \
+/Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/assets/www/plugins/com.plugin.datepicker \
 /Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/assets/www/plugins/de.appplant.cordova.plugin.email-composer \
 /Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/assets/www/plugins/nl.x-services.plugins.calendar \
+/Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/assets/www/plugins/com.plugin.datepicker/www \
+/Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/assets/www/plugins/com.plugin.datepicker/www/android \
+/Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/assets/www/plugins/com.plugin.datepicker/www/android/DatePicker.js \
 /Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/assets/www/plugins/de.appplant.cordova.plugin.email-composer/www \
 /Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/assets/www/plugins/de.appplant.cordova.plugin.email-composer/www/email_composer.js \
 /Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/assets/www/plugins/nl.x-services.plugins.calendar/test \

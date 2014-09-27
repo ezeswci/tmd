@@ -17,13 +17,21 @@ module.exports = [
         "clobbers": [
             "plugin.email"
         ]
+    },
+    {
+        "file": "plugins/com.plugin.datepicker/www/ios/DatePicker.js",
+        "id": "com.plugin.datepicker.DatePicker",
+        "clobbers": [
+            "datePicker"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "nl.x-services.plugins.calendar": "4.2.6",
-    "de.appplant.cordova.plugin.email-composer": "0.8.1"
+    "de.appplant.cordova.plugin.email-composer": "0.8.1",
+    "com.plugin.datepicker": "0.4.0"
 }
 // BOTTOM OF METADATA
 });

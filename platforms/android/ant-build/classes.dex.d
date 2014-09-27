@@ -6,6 +6,16 @@
 /Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/ant-build/classes/com/frabaglia/tmd/R$xml.class \
 /Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/ant-build/classes/com/frabaglia/tmd/R.class \
 /Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/ant-build/classes/com/frabaglia/tmd/TMD.class \
+/Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$1$1.class \
+/Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$1$2.class \
+/Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$1.class \
+/Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$2$1.class \
+/Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$2$2.class \
+/Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$2$3.class \
+/Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$2.class \
+/Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$DateSetListener.class \
+/Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$TimeSetListener.class \
+/Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin.class \
 /Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/ant-build/classes/de/appplant/cordova/plugin/emailcomposer/AttachmentProvider.class \
 /Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/ant-build/classes/de/appplant/cordova/plugin/emailcomposer/EmailComposer$1.class \
 /Users/francoagustinrabaglia/Documents/PhoneGapWorkspace/tmd/platforms/android/ant-build/classes/de/appplant/cordova/plugin/emailcomposer/EmailComposer.class \

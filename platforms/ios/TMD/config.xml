@@ -25,6 +25,9 @@
     <feature name="EmailComposer">
         <param name="ios-package" value="APPEmailComposer" />
     </feature>
+    <feature name="DatePicker">
+        <param name="ios-package" value="DatePicker" />
+    </feature>
     <name>TMD</name>
     <description>
         Hello World sample application that responds to the deviceready event.
@@ -68,6 +71,7 @@
     <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="nl.x-services.plugins.calendar" />
     <gap:plugin name="de.appplant.cordova.plugin.email-composer" />
+    <gap:plugin name="com.plugin.datepicker" version="0.3.2" />
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/icon-48-mdpi.png" />

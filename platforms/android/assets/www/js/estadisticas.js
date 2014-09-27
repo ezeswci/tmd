@@ -6,9 +6,6 @@ var minData = [];
 function cleanHist(newDate) {
     maxData = [];
     minData = [];
-    alert(JSON.stringify(maxDataOriginal));
-    alert(JSON.stringify(maxDataOriginal[3].date.toLocaleString()));
-    alert(JSON.stringify(maxData));
     
     for (index = 0; index < maxDataOriginal.length; index++) {
         if (maxDataOriginal[index].date > newDate) {
@@ -20,7 +17,6 @@ function cleanHist(newDate) {
             minData.push(minDataOriginal[index]);
         }
     }
-    alert(JSON.stringify(maxData));
 }
 
 $(document).ready(onDeviceReady);
@@ -32,13 +28,6 @@ var db;
 // PhoneGap is ready
 //
 function onDeviceReady() {
-    //Actual date
-    //
-    var d = new Date();
-    var dd = d.getDay();
-    var mm = d.getMonth();
-    var yy = d.getFullYear();
-
     //Onclick CB
     //
 
@@ -49,8 +38,6 @@ function onDeviceReady() {
         $('#visualisation').empty();
         //Substract 1 day
         var newDate = new Date(new Date().setDate(new Date().getDate() - 1));
-        //        alert(d);
-        //        alert(newDate);
         cleanHist(newDate);
         drawGraph();
     });
@@ -60,8 +47,6 @@ function onDeviceReady() {
         $('#visualisation').empty();
         //Substract 1 week
         var newDate = new Date(new Date().setDate(new Date().getDate() - 7));
-        //        alert(d);
-        //        alert(newDate);
         cleanHist(newDate);
         drawGraph();
     });
@@ -113,7 +98,7 @@ function onDeviceReady() {
 // Init the table
 //
 function initDB(tx) {
-    tx.executeSql('CREATE TABLE IF NOT EXISTS HIST (id unique, max, min, note)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS HIST (id unique, max, min, note, dd, mm, yy, hs, minut)');
 }
 
 // Transaction error callback
@@ -125,7 +110,6 @@ function errorCB(tx, err) {
 // Transaction success callback
 //
 function successCB() {
-    //alert("Success!");
     //Select query
     //
     db.transaction(selectHist, errorCB);
@@ -136,7 +120,6 @@ function selectHist(tx) {
 }
 
 function querySuccess(tx, rs) {
-    //alert("query succces");
     // this will be empty since no rows were inserted.
     buildGraphHist(rs);
     drawGraph();
@@ -168,8 +151,8 @@ function drawGraph() {
     //D3 settings and data
     //
     var vis = d3.select('#visualisation'),
-        WIDTH = 200,
-        HEIGHT = 200,
+        WIDTH = 250,
+        HEIGHT = 250,
         MARGINS = {
             top: 20,
             right: 20,
@@ -188,11 +171,11 @@ function drawGraph() {
         })]),
         xAxis = d3.svg.axis()
         .scale(xRange)
-        .tickSize(5)
+        .tickSize(3)
         .tickSubdivide(true),
         yAxis = d3.svg.axis()
         .scale(yRange)
-        .tickSize(5)
+        .tickSize(3)
         .orient('left')
         .tickSubdivide(true);
 
@@ -213,17 +196,17 @@ function drawGraph() {
         .y(function (d) {
             return yRange(d.y);
         })
-        .interpolate('basis');
+        .interpolate('linear');
 
     vis.append('svg:path')
         .attr('d', lineFunc(maxData))
-        .attr('stroke', 'blue')
-        .attr('stroke-width', 2)
+        .attr('stroke', '#c25dff')
+        .attr('stroke-width', 3)
         .attr('fill', 'none');
 
     vis.append('svg:path')
         .attr('d', lineFunc(minData))
-        .attr('stroke', 'red')
-        .attr('stroke-width', 2)
+        .attr('stroke', '#ffb33b')
+        .attr('stroke-width', 3)
         .attr('fill', 'none');
 }
