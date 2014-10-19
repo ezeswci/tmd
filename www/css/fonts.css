@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: normal;
+  src: url('helvetica-neue-medium.eot'); /* IE9 Compat Modes */
+  src: url('helvetica-neue-medium?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('helvetica-neue-medium.woff') format('woff'), /* Modern Browsers */
+         url('helvetica-neue-medium.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('helvetica-neue-medium.svg#helvetica-neue-medium') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'NeutraText-BookAlt';
+  font-style: normal;
+  font-weight: normal;
+  src: url('NeutraText-BookAlt.eot'); /* IE9 Compat Modes */
+  src: url('NeutraText-BookAlt?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('NeutraText-BookAlt.woff') format('woff'), /* Modern Browsers */
+         url('NeutraText-BookAlt.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('NeutraText-BookAlt.svg#NeutraText-BookAlt') format('svg'); /* Legacy iOS */
+}

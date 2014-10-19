@@ -3,12 +3,13 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Mi Presion Arterial</title>
-    <script src="cordova.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mi Presion</title>
+     <script src="cordova.js" type="text/javascript"></script>
     <script src="js/lib/jquery-1.11.1.min.js" type="text/javascript"></script>
     <script src="js/plugins/Calendar.js" type="text/javascript"></script>
-    <script src="js/plugins/email_composer.js" type="application/javascript"></script>
     <script src="js/mas.js" type="text/javascript"></script>
+    <script src="js/datosamail.js" type="text/javascript"></script>
 
 
     <link href="css/estilos.css" rel="stylesheet" type="text/css" />
@@ -16,6 +17,7 @@
 </head>
 
 <body>
+<div id="resumen_oculto"></div>
     <div class="header">
         <div class="triangulo_inf"></div>
         <div class="titulo">M&Aacute;S</div>
@@ -27,27 +29,28 @@
         </div>
         “Mi Presi&oacute;n” desea acceder a tu calendario.
         <div class="botones">
-            <div id="x" class="boton">NO PERMITIR</div>
+            <div onclick="cerrarVentana();" class="boton">NO PERMITIR</div>
             <div id="permitir" class="boton">OK</div>
         </div>
     </div>
-    <div id="fondo_negro"></div>
+    <div id="fondo_negro" onclick="cerrarVentana();"></div>
     <p>&nbsp;</p>
     <div class="cuerpo_mas">
         <a href="controlar_presion.html">
-            <div class="item">Controlar mi presi&oacute;n
+            <div class="item"> <div class="txt">Controlar mi presi&oacute;n</div>
                 <img src="img/flecha.jpg" width="23" height="38" />
             </div>
         </a>
         <a>
-            <div class="item" id="recordatorio">Recordatorio
+            <div class="item" id="recordatorio"><div class="txt">Recordatorio</div>
                 <img src="img/flecha.jpg" width="23" height="38" />
             </div>
         </a>
-        <div class="item" id="amigo">Recomendar a un amigo
+        <div class="item" id="amigo"><div class="txt">Recomendar a un amigo</div>
             <img src="img/flecha.jpg" width="23" height="38" />
-        </div>
-    </div>
+        </div><a href="tecnica_presion.html">
+        <div class="item"><div class="txt">Técnica para medir la presión</div><img src="img/flecha.jpg" width="23" height="38" /></div></a>
+  </div>
     <div class="footer">
         <a href="datos.html">
             <img src="img/datos.jpg" width="135" height="135" />

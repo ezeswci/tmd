@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mi Presion Arterial</title>
+    <script src="cordova.js" type="text/javascript"></script>
+    <script src="js/lib/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="js/datos.js" type="text/javascript"></script>
+
+    <link href="css/estilos.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="triangulo_inf"></div>
+        <div class="titulo">MI PRESI&Oacute;N ARTERIAL
+                <img class="i" src="img/I.jpg" width="40" height="40" />
+        </div>
+    </div>
+
+    <div id="cartel" class="cartel">
+        <div id="x">
+            <img src="img/x.jpg" width="35" height="35" />
+        </div>
+        <strong>¡Muy bien!</strong>
+        <br />Has cargado tus valores
+        <br />de presi&oacute;n arterial hoy.</div>
+
+    <div id="cartel2" class="cartel">
+        <div id="x">
+            <img src="img/x.jpg" width="35" height="35" />
+        </div>
+        Los datos a cargar son la presi&oacute;n arterial m&aacute;xima o sist&oacute;lica (MAX) y la m&iacute;nima o diast&oacute;lica (MIN).
+        <br />
+        <br />El uso de esta aplicaci&oacute;n no implica en ning&uacute;n caso el reemplazo o la modificaci&oacute;n de cualquiera de las indicaciones que el m&eacute;dico te haya dado.</div>
+
+    <div id="fondo_negro"></div>
+
+    <div class="cuerpo2">
+        <!--        CALENDARIO / RELOJ      -->
+        <div class="fecha">
+            <div id="datetime">dd-mm-aa hh:mm</div>
+            <img class="flechita" src="img/flechita.jpg" width="23" height="20" />
+        </div>
+
+        <div class="main">
+            <div class="item">MAX:
+                <input name="max" type="text" id="max" value="---" />mmHg
+                <div id="aclaracion_max">Este valor esta fuera de rango</div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="item">MIN:
+                <input name="min" type="text" id="min" value="---" />mmHg
+                <div id="aclaracion_min">Este valor esta fuera de rango</div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="item">Nota:
+                <input name="note" type="text" id="note" value="---" />
+            </div>
+        </div>
+        <div class="item boton">
+            <div class="boton" id="borrarButton">BORRAR</div>
+            <div class="boton" id="guardarButton">GUARDAR</div>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="datos.html">
+            <img src="img/datos_hover.jpg" width="135" height="135" />
+        </a>
+        <a href="estadisticas.html">
+            <img src="img/estadisticas.jpg" width="135" height="135" />
+        </a>
+        <a href="historial.html">
+            <img src="img/historial.jpg" width="135" height="135" />
+        </a>
+        <a href="mas.html">
+            <img src="img/mas.jpg" width="135" height="135" />
+        </a>
+    </div>
+</body>
+
+</html>
